@@ -17,14 +17,14 @@
 
     - name: Pull Docker image
       community.docker.docker_image:
-        name: "pborade90/myapp"
+        name: "vaibhavgumalwad/myapp"
         tag: "{{ git_commit }}"
         source: pull
 
     - name: Run container
       community.docker.docker_container:
         name: myapp
-        image: "pborade90/myapp:{{ git_commit }}"
+        image: "vaibhavgumalwad/myapp:{{ git_commit }}"
         state: started
         restart_policy: unless-stopped
         ports:
