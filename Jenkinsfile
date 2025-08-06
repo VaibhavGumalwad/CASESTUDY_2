@@ -22,8 +22,8 @@ pipeline {
           )]) {
             sh '''
               echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
-              docker build -t pborade90/myapp:$GIT_COMMIT .
-              docker push pborade90/myapp:$GIT_COMMIT
+              docker build -t vaibhavgumalwad/myapp:$GIT_COMMIT .
+              docker push vaibhavgumalwad/myapp:$GIT_COMMIT
             '''
           }
         }
